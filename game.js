@@ -5,6 +5,7 @@ var hpyou = 250;
 var attackme = 30;
 var attackyou = 30;
 var time = 30;
+var test;
 
 var element = document.getElementById("time");
 element.innerHTML = time;
@@ -170,5 +171,5 @@ function hpupdate(me,you){
   });
   time--;
   element.innerHTML = time;
-  
+
 }
