@@ -82,7 +82,7 @@ function draw(){
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "#0a0a0a";
   ctx.font = "48px serif";
-  ctx.fillText(hpme, 10, 50);
+  ctx.fillText(hpme+"("+attackme+")"+":"+hpyou+"("+attackyou+")", 10, 50);
 }
 /*
 function redraw(){
