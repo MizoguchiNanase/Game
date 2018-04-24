@@ -83,6 +83,8 @@ function draw(){
   ctx.fillStyle = "#0a0a0a";
   ctx.font = "48px serif";
   ctx.fillText(hpme, 10, 50);
+
+  character(me,you);
 }
 /*
 function redraw(){
@@ -154,6 +156,14 @@ document.onkeydown = function (e){
 }
 
 //体力表示更新
+function character(me,you){
+
+    var img = new Image();
+    img.src = "../image/pi.jpg";
+    ctx.drawImage(img,0,0,500,500);
+}
+
+
 function hpupdate(me,you){
   if(me==1){
     attackme+=30;
