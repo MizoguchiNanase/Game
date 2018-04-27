@@ -191,6 +191,12 @@ function hpupdate(me,you){
   if((me==2)&&(you==3)){
     attackme=30;
   }
+  if(me==2){
+    attackme=30;
+  }
+  if(you==2){
+    attackyou=30;
+  }
   if(hpme<0){
     hpme=0;
   }
