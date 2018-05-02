@@ -7,8 +7,8 @@ var attackyou = 30;
 var time = 30;
 
 var keyStr;
-var select = 0;
-var select_e = 0;
+var select;
+var select_e;
 var imgbg = new Image();
 imgbg.src = "../image/bg.png";
 
@@ -24,7 +24,7 @@ window.onload = function(){
     buttonStart.addEventListener('click', start);;
     buttonHowto.addEventListener('click', howto);;
     buttonRunking.addEventListener('click', runking);
-    //initGame();
+    initGame();
 }
 
 //使う値の初期化
@@ -34,6 +34,8 @@ function initGame(){
     attackme = 30;
     attackyou = 30;
     time = 30;
+    select = 0;
+    select_e = 0;
 }
 
 //スタート画面
@@ -46,7 +48,7 @@ function start(){
 function end(num){
     //スコア換算とランキング登録
     var name = "User";
-    var score = 30-time*100+hpme;
+    var score = (30-time)*100 + hpme;
     //データベースに登録
     runking();
 }
@@ -179,7 +181,7 @@ function character(me,you){
         img.src = "../image/down.png";
         break;
       default:
-        img.src = "../image/pi.jpg";
+        img.src = "../image/standby.png";
     }
     //ctx.drawImage(img,300,130,150,150);
     ctx.save();// canvas状態を保存
@@ -202,7 +204,7 @@ function character2(me,you){
         img.src = "../image/down.png";
         break;
       default:
-        img.src = "../image/pi.jpg";
+        img.src = "../image/standby.png";
     }
     ctx.drawImage(img,50,50,150,150);
 
