@@ -6,36 +6,11 @@ var attackme = 30;
 var attackyou = 30;
 var time = 30;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 var keyStr;
 var select = 0;
 var select_e = 0;
 var imgbg = new Image();
 imgbg.src = "../image/bg.png";
-
-var keyStr;
-var select = 0;
-var select_e = 0;
-var keyStr;
-var select = 0;
-var select_e = 0;
-=======
-  var keyStr;
-  var select = 0;
-  var select_e = 0;
-  var imgbg = new Image();
-  imgbg.src = "../image/bg.png";
-
->>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
-=======
-  var keyStr;
-  var select = 0;
-  var select_e = 0;
-  var imgbg = new Image();
-  imgbg.src = "../image/bg.png";
-
->>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
 
 var element = document.getElementById("time");
 element.innerHTML = time;
@@ -210,7 +185,7 @@ function character(me,you){
     ctx.save();// canvas状態を保存
     ctx.transform(-1, 0, 0, 1, 0, 0);// 画像を左右反転させる
     ctx.drawImage(img, -190, 130, 150, 150);
-    ctx.restore();// canvasの状態をsaveされた状態に戻す 
+    ctx.restore();// canvasの状態をsaveされた状態に戻す
 }
 
 function character2(me,you){
@@ -233,19 +208,6 @@ function character2(me,you){
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
-
-
-
-
-<<<<<<< HEAD
->>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
-=======
->>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
 function hpupdate(me,you){
   if(me==1){
     attackme+=30;
@@ -290,6 +252,12 @@ function hpupdate(me,you){
   });
   $("#you").css({
     "width":hpyou+"px"
+  });
+  $("#me_en").css({
+    "width":attackme+"px"
+  });
+  $("#you_en").css({
+    "width":attackyou+"px"
   });
   time--;
   element.innerHTML = time;
