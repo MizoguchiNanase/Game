@@ -41,7 +41,7 @@
     <div id="title">ランキング</div>
     <?php
       $score = $_POST["score"];
-      echo "score=".$score;
+      echo "aaaa".$score;
 
 
     ?>

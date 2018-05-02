@@ -71,7 +71,7 @@ function runking(){
       type: "POST",
       url: "index.php",
       async: true,
-      data:"score="+score.text
+      data:"score=100"
     });
 
 
