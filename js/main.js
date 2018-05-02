@@ -66,6 +66,16 @@ function howto(){
 function runking(){
     scene = 3;
     ChangeToRunking();
+
+    $.ajax({
+      type: "POST",
+      url: "index.php",
+      async: true,
+      data:"score="+score.text
+    });
+
+
+
 }
 
 
