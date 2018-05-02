@@ -51,7 +51,11 @@ canvas{
   width: 700px;
   margin: auto;
 }
-
+.hp_wrapper{
+  width: 350px;
+  float: left;
+  margin-bottom: 5px;
+}
 #me{
   height:20px;
   width: 250px;
@@ -64,6 +68,37 @@ canvas{
   -ms-border-radius: 1em;
   transition: 1.0s;
 }
+#me_en{
+  height:10px;
+  width: 20px;
+  background: aqua;
+  border: solid 1px black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ms-border-radius: 1em;
+  transition: 1.0s;
+  position: relative;
+}
+
+#me_en::before{
+  content: "";
+  height:10px;
+  width: 120px;
+  background: black;
+  margin-top: -1px;
+
+  border: solid 1px black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ms-border-radius: 1em;
+  transition: 1.0s;
+
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
 
 #you{
   height:20px;
@@ -75,4 +110,47 @@ canvas{
   -webkit-border-radius: 1em;
   -o-border-radius: 1em;
   -ms-border-radius: 1em;
+
+}
+#you_en{
+  height:10px;
+  width: 20px;
+  background: #34bebc;
+  float: right;
+  border:solid 1px black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ms-border-radius: 1em;
+}
+#you_en{
+  height:10px;
+  width: 20px;
+  background: aqua;
+  border: solid 1px black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ms-border-radius: 1em;
+  transition: 1.0s;
+  position: relative;
+}
+
+#you_en::before{
+  content: "";
+  height:10px;
+  width: 120px;
+  background: black;
+  margin-top: -1px;
+
+  border: solid 1px black;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ms-border-radius: 1em;
+  transition: 1.0s;
+
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }

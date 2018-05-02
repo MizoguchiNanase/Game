@@ -6,9 +6,18 @@ var attackme = 30;
 var attackyou = 30;
 var time = 30;
 
+<<<<<<< HEAD
   var keyStr;
   var select = 0;
   var select_e = 0;
+  var imgbg = new Image();
+  imgbg.src = "../image/bg.png";
+
+=======
+var keyStr;
+var select = 0;
+var select_e = 0;
+>>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
 
 var element = document.getElementById("time");
 element.innerHTML = time;
@@ -83,8 +92,10 @@ function draw(){
   ctx.fillStyle = "#0a0a0a";
   ctx.font = "48px serif";
   ctx.fillText(hpme, 10, 50);
+  ctx.drawImage(imgbg,0,0,500,300);
 
   character(me,you);
+  character2(me,you);
 }
 /*
 function redraw(){
@@ -159,11 +170,50 @@ document.onkeydown = function (e){
 function character(me,you){
 
     var img = new Image();
-    img.src = "../image/pi.jpg";
-    ctx.drawImage(img,0,0,500,500);
+    switch(me){
+      case 1:
+        img.src = "../image/up.png";
+        break;
+      case 2:
+        img.src = "../image/right.png";
+        break;
+      case 3:
+        img.src = "../image/down.png";
+        break;
+      default:
+        img.src = "../image/pi.jpg";
+    }
+    ctx.drawImage(img,300,130,150,150);
+
 }
 
+function character2(me,you){
 
+    var img = new Image();
+    switch(you){
+      case 1:
+        img.src = "../image/up.png";
+        break;
+      case 2:
+        img.src = "../image/right.png";
+        break;
+      case 3:
+        img.src = "../image/down.png";
+        break;
+      default:
+        img.src = "../image/pi.jpg";
+    }
+    ctx.drawImage(img,50,50,150,150);
+
+}
+
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
 function hpupdate(me,you){
   if(me==1){
     attackme+=30;
@@ -208,6 +258,12 @@ function hpupdate(me,you){
   });
   $("#you").css({
     "width":hpyou+"px"
+  });
+  $("#me_en").css({
+    "width":attackme+"px"
+  });
+  $("#you_en").css({
+    "width":attackyou+"px"
   });
   time--;
   element.innerHTML = time;
