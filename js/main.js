@@ -7,12 +7,18 @@ var attackyou = 30;
 var time = 30;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   var keyStr;
   var select = 0;
   var select_e = 0;
   var imgbg = new Image();
   imgbg.src = "../image/bg.png";
 
+=======
+var keyStr;
+var select = 0;
+var select_e = 0;
+>>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
 =======
 var keyStr;
 var select = 0;
@@ -208,10 +214,13 @@ function character2(me,you){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
 =======
 >>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
 function hpupdate(me,you){
