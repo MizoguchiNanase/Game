@@ -6,9 +6,9 @@ var attackme = 30;
 var attackyou = 30;
 var time = 30;
 
-  var keyStr;
-  var select = 0;
-  var select_e = 0;
+var keyStr;
+var select = 0;
+var select_e = 0;
 
 var element = document.getElementById("time");
 element.innerHTML = time;
@@ -163,7 +163,6 @@ function character(me,you){
     ctx.drawImage(img,0,0,500,500);
 }
 
-
 function hpupdate(me,you){
   if(me==1){
     attackme+=30;
@@ -208,6 +207,12 @@ function hpupdate(me,you){
   });
   $("#you").css({
     "width":hpyou+"px"
+  });
+  $("#me_en").css({
+    "width":attackme+"px"
+  });
+  $("#you_en").css({
+    "width":attackyou+"px"
   });
   time--;
   element.innerHTML = time;
