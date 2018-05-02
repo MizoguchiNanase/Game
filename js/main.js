@@ -7,23 +7,26 @@ var attackyou = 30;
 var time = 30;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
+var keyStr;
+var select = 0;
+var select_e = 0;
+var imgbg = new Image();
+imgbg.src = "../image/bg.png";
+
+var keyStr;
+var select = 0;
+var select_e = 0;
+var keyStr;
+var select = 0;
+var select_e = 0;
+=======
   var keyStr;
   var select = 0;
   var select_e = 0;
   var imgbg = new Image();
   imgbg.src = "../image/bg.png";
 
-=======
-var keyStr;
-var select = 0;
-var select_e = 0;
->>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
-=======
-var keyStr;
-var select = 0;
-var select_e = 0;
->>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
+>>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
 
 var element = document.getElementById("time");
 element.innerHTML = time;
@@ -68,12 +71,17 @@ function end(num){
 function howto(){
     scene = 2;
     ChangeToHowto();
+
 }
+
+
+
 //ランキング画面
 function runking(){
     scene = 3;
     ChangeToRunking();
 }
+
 
 //勝敗判定
 function judge(){
@@ -100,8 +108,8 @@ function draw(){
   ctx.fillText(hpme, 10, 50);
   ctx.drawImage(imgbg,0,0,500,300);
 
-  character(me,you);
-  character2(me,you);
+  character(select,select_e);
+  character2(select,select_e);
 }
 /*
 function redraw(){
@@ -189,8 +197,11 @@ function character(me,you){
       default:
         img.src = "../image/pi.jpg";
     }
-    ctx.drawImage(img,300,130,150,150);
-
+    //ctx.drawImage(img,300,130,150,150);
+    ctx.save();// canvas状態を保存
+    ctx.transform(-1, 0, 0, 1, 0, 0);// 画像を左右反転させる
+    ctx.drawImage(img, -190, 130, 150, 150);
+    ctx.restore();// canvasの状態をsaveされた状態に戻す 
 }
 
 function character2(me,you){
@@ -214,15 +225,12 @@ function character2(me,you){
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
 =======
->>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
-=======
->>>>>>> 356e054022218fcbce990e65e4c2de61c15278fe
+
+
+
+
+>>>>>>> 502025c90488c9b0cffe621f6996ff123c1c5e08
 function hpupdate(me,you){
   if(me==1){
     attackme+=30;
@@ -267,12 +275,6 @@ function hpupdate(me,you){
   });
   $("#you").css({
     "width":hpyou+"px"
-  });
-  $("#me_en").css({
-    "width":attackme+"px"
-  });
-  $("#you_en").css({
-    "width":attackyou+"px"
   });
   time--;
   element.innerHTML = time;
